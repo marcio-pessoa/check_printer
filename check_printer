@@ -45,11 +45,11 @@ check_result() {
   # Check if result is warning ou critical level
   case "$CHECK_TYPE" in
     gt)
-			check_reverse
-			;;
+      check_reverse
+      ;;
     lt)
-			check_direct
-			;;
+      check_direct
+      ;;
   esac
 
   # Return string and Nagios notification level
@@ -83,39 +83,39 @@ check_reverse() {
 # 
 case "$RESOURCE" in
   BLACK)
-		OID=$OID_black
-		NAME="Toner black"
-		UNIT="%"
-		FACTOR=1
-		CHECK_TYPE=gt # Greater than
-		check_result
-		;;
+    OID=$OID_black
+    NAME="Toner black"
+    UNIT="%"
+    FACTOR=1
+    CHECK_TYPE=gt # Greater than
+    check_result
+    ;;
   CYAN)
-		OID=$OID_cyan
-		NAME="Toner cyan"
-		UNIT="%"
-		FACTOR=1
-		CHECK_TYPE=gt # Greater than
-		check_result
-		;;
+    OID=$OID_cyan
+    NAME="Toner cyan"
+    UNIT="%"
+    FACTOR=1
+    CHECK_TYPE=gt # Greater than
+    check_result
+    ;;
   MAGENTA)
-		OID=$OID_magenta
-		NAME="Toner magenta"
-		UNIT="%"
-		FACTOR=1
-		CHECK_TYPE=gt # Greater than
-		check_result
-		;;
+    OID=$OID_magenta
+    NAME="Toner magenta"
+    UNIT="%"
+    FACTOR=1
+    CHECK_TYPE=gt # Greater than
+    check_result
+    ;;
   YELLOW)
-		OID=$OID_yellow
-		NAME="Toner yellow"
-		UNIT="%"
-		FACTOR=1
-		CHECK_TYPE=gt # Greater than
-		check_result
-		;;
+    OID=$OID_yellow
+    NAME="Toner yellow"
+    UNIT="%"
+    FACTOR=1
+    CHECK_TYPE=gt # Greater than
+    check_result
+    ;;
   *)
-		echo "Usage: $PROG <IP_ADDR COMMUNITY RESOURCE WARNING CRITICAL>"
-		;;
+    echo "Usage: $PROG <IP_ADDR COMMUNITY RESOURCE WARNING CRITICAL>"
+    ;;
 esac
 exit $UNKNOW
